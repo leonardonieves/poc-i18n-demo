@@ -1,59 +1,88 @@
-# PocI18nDemo
+# POC for Internationalization in Angular using ngx-translate and Standalone Components
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+## Description
 
-## Development server
+This project is a Proof of Concept (POC) demonstrating how to implement internationalization (i18n) in an Angular 19 application using the `ngx-translate` library. Additionally, standalone components are used in Angular, enabling a more modular and flexible architecture.
 
-To start a local development server, run:
+The project includes the following features:
 
-```bash
-ng serve
-```
+- Dynamic language switching with `ngx-translate`.
+- Language selection via a dropdown menu with flags.
+- A button to toggle between light and dark mode.
+- Use of real Material Design themes for a modern look.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This POC showcases how to efficiently and flexibly achieve internationalization in Angular, leveraging standalone components and dynamically configuring the language of the application.
 
-## Code scaffolding
+## Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Multi-language support**: Implemented languages include English (en) and Spanish (es).
+- **Light and dark mode**: Toggle between light and dark mode with a simple toggle button.
+- **Language selector menu**: Users can select the app's language through a dropdown menu with representative flags.
+- **Use of `ngx-translate`**: The `ngx-translate` library is used to manage app translations, allowing dynamic loading of translation files.
 
-```bash
-ng generate component component-name
-```
+## Technologies Used
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Angular 19**: The framework used to build the application.
+- **ngx-translate**: Library for internationalization in Angular.
+- **Angular Material**: A UI component library for Angular that helps create modern, accessible designs.
+- **Custom CSS**: Classes used to toggle between light and dark themes.
+- **SVG Flags**: Flags are managed through SVG files.
 
-```bash
-ng generate --help
-```
+## Installation
 
-## Building
+1. Clone this repository:
 
-To build the project run:
+   ```bash
+   git clone https://github.com/leonardonieves/poc-i18n-demo.git
+   
+2. Navigate to the project directory:
+   ```bash
+   cd poc-i18n-demo
 
-```bash
-ng build
-```
+4. Install the dependencies:
+   ```bash
+   npm install
+   
+6. Start the application:
+   ```bash
+   ng serve
+   
+5.Access the application in your browser:
+  ```bash
+   http://localhost:4200
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Usage
+You can change the language of the application by selecting an option from the dropdown menu in the navigation bar (using flags).
 
-## Running unit tests
+You can also toggle between light and dark mode using the toggle button in the navigation bar.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Project Structure
+src/app: Contains the main files of the application.
 
-```bash
-ng test
-```
+app.component.ts: The main component of the app.
 
-## Running end-to-end tests
+app.component.html: The HTML template that defines the UI structure.
 
-For end-to-end (e2e) testing, run:
+app.component.css: Styles for the main component.
 
-```bash
-ng e2e
-```
+src/assets/i18n: Folder containing the translation files (en.json, es.json).
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+angular.json: Angular configuration, including routing and static file setup.
 
-## Additional Resources
+This project uses ngx-translate to provide a more flexible and dynamic solution for switching languages during runtime.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contributing
+If you would like to contribute to this project, please follow these steps:
+
+Fork this repository.
+
+Create a new branch (git checkout -b feature/new-feature).
+
+Make your changes and commit them (git commit -am 'Add new feature').
+
+Push to your branch (git push origin feature/new-feature).
+
+Create a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
