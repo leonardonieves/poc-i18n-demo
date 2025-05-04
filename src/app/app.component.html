@@ -1,14 +1,28 @@
-<main class="main">
-  <div class="content">
-    <select (change)="onLanguageChange($event)">
-      <option value="es">🇪🇸 Español</option>
-      <option value="en">🇺🇸 English</option>
-    </select>
-    
-    
+<mat-toolbar color="primary">
+  <span>🌐 {{ 'APP.TITLE' | translate }}</span>
+  <span class="spacer"></span>
 
-    <h1>{{ 'HOME.TITLE' | translate }}</h1>
-    <p>{{ 'HOME.DESCRIPTION' | translate }}</p>
+  <!-- Dark/Light Toggle -->
+  <button mat-icon-button (click)="toggleDarkMode()">
+    <mat-icon>{{ isDarkMode ? 'dark_mode' : 'light_mode' }}</mat-icon>
+  </button>
 
-  </div>
-</main>
+  <!-- Language Switch -->
+  <button mat-icon-button [matMenuTriggerFor]="langMenu">
+    <img [src]="'assets/flags/' + currentLang + '.svg'" alt="Language" class="flag">
+  </button>
+
+  <mat-menu #langMenu="matMenu">
+    <button mat-menu-item (click)="switchLanguage('en')">
+      <img src="assets/flags/en.svg" alt="English" class="flag-small"> {{ 'LANGUAGES.EN' | translate }}
+    </button>
+    <button mat-menu-item (click)="switchLanguage('es')">
+      <img src="assets/flags/es.svg" alt="Español" class="flag-small"> {{ 'LANGUAGES.ES' | translate }}
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="content">
+  <h1>{{ 'HOME.TITLE' | translate }}</h1>
+  <p>{{ 'HOME.DESCRIPTION' | translate }}</p>
+</div>

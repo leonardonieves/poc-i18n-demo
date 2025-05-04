@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+/* Light mode (default) */
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    background: #fafafa;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark-theme {
+    background: #121212;
+    color: #fff;
+}
+
+.mat-toolbar {
+    background-color: #1976d2;
+    /* Azul Material */
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme .mat-toolbar {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme .mat-menu-content {
+    background: #2c2c2c;
+}
+
+body.dark-theme button {
+    color: #fff;
+}
+
+/* Estilos generales del menú */
+.mat-menu-panel {
+    color: #000;
+    /* Texto negro en modo claro */
+}
+
+/* Estilos para el menú en modo oscuro */
+body.dark-theme .mat-menu-panel {
+    background-color: #333;
+    /* Fondo oscuro para el menú en modo oscuro */
+    color: #fff;
+    /* Texto blanco en modo oscuro */
+}
+
+/* Estilo de las opciones del menú */
+body.dark-theme .mat-menu-item {
+    color: #fff;
+    /* Texto blanco en modo oscuro */
+    background-color: transparent;
+    /* Fondo transparente para las opciones */
+}
+
+body:not(.dark-theme) .mat-menu-item {
+    color: #000;
+    /* Texto negro en modo claro */
+    background-color: transparent;
+    /* Fondo transparente para las opciones */
+}
+
+/* Hover sobre las opciones del menú */
+body.dark-theme .mat-menu-item:hover {
+    background-color: #555;
+    /* Fondo ligeramente más oscuro al pasar el mouse en modo oscuro */
+}
+
+body:not(.dark-theme) .mat-menu-item:hover {
+    background-color: #e0e0e0;
+    /* Fondo ligeramente más claro al pasar el mouse en modo claro */
+}

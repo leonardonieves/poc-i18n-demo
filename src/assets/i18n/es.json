@@ -1,7 +1,13 @@
 {
-    "HOME": {
-      "TITLE": "Bienvenido",
-      "DESCRIPTION": "¡Esta es una aplicación internacionalizada!"
-    }
+  "APP": {
+    "TITLE": "Mi Aplicación Internacionalizada"
+  },
+  "HOME": {
+    "TITLE": "Bienvenido",
+    "DESCRIPTION": "Esta es una aplicación de demostración con soporte de internacionalización."
+  },
+  "LANGUAGES": {
+    "EN": "Inglés",
+    "ES": "Español"
   }
-  
+}
